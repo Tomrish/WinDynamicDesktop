@@ -61,7 +61,6 @@ namespace WinDynamicDesktop
         {
             using (var ps = PowerShell.Create())
             {
-                ps.AddScript("Set-ExecutionPolicy Bypass -Scope Process -Force");
                 ps.AddScript(File.ReadAllText(path));
                 ps.AddParameter("daySegment2", args.daySegment2);
                 ps.AddParameter("daySegment4", args.daySegment4 ?? -1);
